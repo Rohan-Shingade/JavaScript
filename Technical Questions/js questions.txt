@@ -1,0 +1,74 @@
+1) as a cient when you are accessing a website or downloading an image, then in what order content will be available at client's machine?
+
+------------------------------------------------------------------
+
+2) diff between https & http
+https : google .com will br there
+
+primary differenc between them is security = hyper text transfr protocol with security
+http is basically is not that secure.
+
+some webisites which just displaying info or images can be just use http
+
+on the other hand when we have a website which includes ome payment option & confidential data then those websites can use Https
+
+---------------------------------------------------------------------
+
+3) inline css ?
+---------------------------------------------------------------------
+4) external css ?
+----------------------------------------------------------------------
+5) what if there is property in inline css & external css, what property will browser pick ?
+    - inline css property will be applied because inline css will have higher priority.
+
+-----------------------------------------------------------------------------------------------------
+
+6) In some scenario, you want external css will have more priority then what will you do
+    - in those scenarios i will add property value "!important" in front of those property.
+
+-----------------------------------------------------------------------------------------------------
+
+7) if you are bulding a large website, will you be using important everywhere in css or not.
+- nope! it should only used for special cases where its required to override default values.
+
+----------------------------------------------------------------------------------------------------
+
+8) 3 different ways to create a variable in JavaScript.
+var name; // global scope
+let age ;// block level scoping (block means {} )
+const city;// const keyword makes sure this cannot change once declared.
+
+---------------------------------------------------------------------------------------------------
+
+9) different between let  var & const
+var will have global scope. you can declare variable using var everywhere in program. Variables created using var can also be reinitialised.
+
+let will have block level scope. variables declared using will be not be accessible outside block. reinitialsed of variable within same block is also not allowed.
+
+const also has block level scope. variables using const cannot be reinitialised, but we can modify the value of the variable like const arr = [];
+
+-----------------------------------------------------------------------------------------------
+
+10) what is hoisting in javascript
+Hoisting is JavaScript behaviour in which js moves up variable & function declaration at the top of the code.
+
+------------------------------------------------------------------------
+
+11) what are the promises in js ?
+promises is basically like the objects which lets us perform a task a synchronously
+
+what they do - 
+if there is task which not gonna happen synchronously like an API call but its gonna take some time to execute then we can use promise to execute that task asynchronously, then that task goes into the microtask queue, then it gets resolved or rejected depends happens then get back response by using ".then" if it is resolved or ".catch" if it is rejected
+
+--------------------------------------------------------
+
+what is promise.all ?
+suppose we want to perform 2-3 tasks asynchronously & concurrently, so we can just pass the array of promises and it returns response in an array, but if one of them gets fails, all other promises also gets rejected
+
+tell me a use case:
+if we want to fetch array of id's, i've seen many peoples doing it using async await but that doesn't happen concurrently(it happens like 1 ends & other starts) so instead of that we can use "promise.all"
+
+----------------------------------------------------------
+
+what is event loop ?
+event loops gives us power to do the asynchronous tasks and also basically whene we use setTimeout an all it goes to the macro task queue in micro task, so first it will execute all tasks from main thread then checks if main thread is empty or not & if empty it will push tasks to the main thread and execution happens
