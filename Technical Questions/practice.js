@@ -307,54 +307,6 @@ getName(); */
 //setTimeout works like API here, when program runs all code will be run first, and then setTimeout function will run. And when setTimeout funcion runs that time  variable a was already 100  & we'll get that output as 100.
 
 
-/* 
-
-1) as a cient when you are accessing a website or downloading an image, then in what order content will be available at client's machine?
-
-------------------------------------------------------------------
-
-2) diff between https & http
-https : google .com will br there
-
-primary differenc between them is security = hyper text transfr protocol with security
-http is basically is not that secure.
-
-some webisites which just displaying info or images can be just use http
-
-on the other hand when we have a website which includes ome payment option & confidential data then those websites can use Https
-
--------------------------------------------------------------------
-
-3) inline css
-4) external css
-5) what if there is property in inline css & external css, what property will browser pick ?
-    - inline css property will be applied because inline css will have higher priority.
-
-6) In some scenario, you want external css will have more priority then what will you do
-    - in those scenarios i will add property value "!important" in front of those property.
-
-7) if you are bulding a large website, will you be using important everywhere in css or not.
-- nope! it should only used for special cases where its required to override default values.
-
-8) 3 different ways to create a variable in JavaScript.
-var name; // global scope
-let age ;// block level scoping (block means {} )
-const city;// const keyword makes sure this cannot change once declared.
-
-9) different between let  var & const
-var will have global scope. you can declare variable using var everywhere in program. Variables created using var can also be reinitialised.
-
-let will have block level scope. variables declared using will be not be accessible outside block. reinitialsed of variable within same block is also not allowed.
-
-const also has block level scope. variables using const cannot be reinitialised, but we can modify the value of the variable like const arr = [];
-
-
-10) what is hoisting in javascript
-Hoisting is JavaScript behaviour in which js moves up variable & function declaratin at the top of the code.
-
-
-
-*/
 
 
 
