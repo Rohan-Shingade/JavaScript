@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    .b1, .b2, .b3, .b4 {
+      width: 5%;
+      height: 25%;
+      background-color: blue;
+      border: 1.5px solid black;
+      margin: 20px;
+      cursor: pointer;
+      padding: 20px;
+      text-align: center;
+
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="b1" onclick="box()"> box-1 </div>
+  <div class="b2" onclick="box()"> box-2 </div>
+  <div class="b3" onclick="box()"> box-3 </div>
+  <div class="b4" onclick="box()"> box-4 </div>
+</body>
+
+<script>
+  function box() {    
+    let box1 = document.querySelector('.b1');
+    
+    if (box1.style.backgroundColor == "blue") {
+      box1.style.backgroundColor = 'green';
+    } else {
+      box1.style.backgroundColor = 'blue';
+    }
+
+    // let box2 = document.querySelector('.b2');
+    // if(box2.style.backgroundColor)
+
+
+
+    // document.querySelector('.b3');
+    // document.querySelector('.b4');
+  }
+
+</script>
+</html>
