@@ -1,0 +1,17 @@
+1) tell me 1 reason why do you think react is faster than plain html & vanilla js?
+
+react has concept of virtual DOM which is an in-memory representaion of actual DOM. so what happens is using the virtual DOM a diffing process(it has 2 snapshots previous & current) goes on under the hood which is known as reconciliation so when it encounters that there is change in code then it interact with the actual DOM
+
+--------------------------------------------------------------------------------------------
+
+2) is there any scenario where react acts slower than HTML & Vanilla js ?
+
+
+------------------------------------------------------------------------------------
+
+3) what is higher order component ?
+higher order component are those who takes a component as a parameter and retunr the updated component. They are like higher order functions only but in react it is a practice to call them as components
+
+------------------------------------------------------------------------------------
+
+4) use case for higher order comopnent ?
