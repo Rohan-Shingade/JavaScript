@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation in JavaScript from Telusko Part 1</title>
+
+    <script>
+
+        function validate () {
+            let username = document.getElementById("uname");        
+            let password = document.getElementById("pass");
+            
+
+
+            //part 1 code
+
+            // if(username.value.trim() == "" || password.value.trim() == "") {
+            //     alert("No Blank values allowed");
+            //     return false;
+            // } else {
+            //     return true;
+            // }
+
+            //==================================================================================
+
+            //part 2 code
+
+            if (username.value.trim() == ""){
+                uname.style.border = "1px solid red";
+                document.getElementById("lbluser").style.visibility="visible";
+                alert('Blank username');
+                return false;
+            } else if(password.value.trim() == ""){
+                password.style.border = "1px solid red";
+                document.getElementById("lblpass").style.visibility = "visible";
+                alert('Blank password');
+                return false;
+            } else if(password.value.trim().length < 5) {
+                alert('Password too short');
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+
+    </script>
+</head>
+    <body>
+        <form onsubmit="return validate()" action="message.html">
+            <input type="text" id="uname" placeholder="Username" />
+            <!-- part 2 -->
+            <label id="lbluser" style="color: red; visibility: hidden;"> Invalid Username </label> <br> <br>
+
+            <input type="password" id="pass" placeholder="Password" /> 
+            <label type="text" id="lblpass" style="color: red; visibility: hidden;"> Invalid Password </label> <br> <br>
+
+            <button type="submit" > Submit </button>
+        </form>
+        
+    </body>
+</html>

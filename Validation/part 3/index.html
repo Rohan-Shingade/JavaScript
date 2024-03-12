@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form Validation in JavaScript</title>
+
+    <script>
+
+        function validate() {
+
+            let uname = document.getElementById("unm").value;
+            let contact = document.getElementById("contact").value;
+            let pass = document.getElementById("pass").value;
+            let con_pass = document.getElementById("confPass").value;
+
+            //Validation for all fields mandatory
+            if(uname = "" || contact == "" || pass == "" || con_pass == "") {
+                alert("All fields are mandatory");
+                return false;
+            // } else if(uname.length < 5 ) {
+            //     alert("Please enter username greater that 5 characters");
+            //     return false;
+            } else if(contact.length < 10 || contact.length > 10) {
+                alert("Please enter valid number");
+                return false;
+            } else if(isNaN(contact)) {
+                alert("Only Numbers are allowed");
+                return false;
+            } else if(pass != con_pass) {
+                alert("Please enter same password");
+                document.getElementById(con_pass).value = "";
+                return false;
+            }
+            else {
+                return true;
+            } 
+        
+        }
+
+    </script>
+</head>
+<body>
+
+    <form onsubmit="return validate()" action="message.html">
+
+
+        <label id="lblusernm"> Username : </label>
+        <input type="text" id="unm" placeholder="Username"/> <br><br>
+
+        <label id="lblcontact"> Contact : </label>
+        <input type="text" id="contact" placeholder="Contact"/><br><br>
+
+        <label id="lblpass"> Password : </label>
+        <input type="password" id="pass" placeholder="Password"/> <br><br>
+
+        <label id="lblconfPass"> Confirm Password : </label>
+        <input type="password" id="confPass" placeholder="Confirm Password"/> <br><br>
+
+        <button type="submit"> Submit </button>
+
+       
+
+    </form>
+    
+</body>
+</html>
